@@ -1,5 +1,4 @@
-# Projeto de Desenvolvimento Full Stack
-
+# Fase 1 - Módulo TypeScript
 ## Módulos
 
 - [Desenvolvimento Básico](./DesenvolvimentoBasico)
@@ -7,6 +6,20 @@
 - [Encapsulamento](./Encapsulamento)
 - [Inversão de Dependência](./InversaoDeDependencia)
 
+---
+
+## Desenvolvimento Básico
+
+TypeScript é um superset do JavaScript que adiciona tipagem estática opcional ao código. Ele permite que desenvolvedores detectem e corrijam erros durante o desenvolvimento, antes da execução do programa, garantindo maior robustez e escalabilidade.
+
+**Por que usar:**
+- **Detecção de erros:** Tipagem estática ajuda a evitar bugs antes da execução.
+
+- **Manutenção:** Código mais legível e fácil de manter.
+
+- **Escalabilidade:** Ideal para projetos grandes e equipes colaborativas.
+
+- **Recursos modernos:** Oferece funcionalidades avançadas como interfaces e generics.
 ---
 
 ## Desenvolvimento Básico
