@@ -11,8 +11,8 @@ Este espaço reúne meus projetos, anotações, atividades, tech challenges e de
 ## 📑 Sumário
 
 - [TypeScript](./Fase1/1-TypeScript/)
-- [Domain Driven Design](./Fase1/2-DDD/)
-- [Low Code Development](./Fase1/3-LowCodeDevelopment/)
+- [Domain Driven Design](./Fase1/2-Domain-Driven-Design(DDD)/)
+- [Low Code Development](./Fase1/3-Low-Code-Development/)
 
 ---
 
