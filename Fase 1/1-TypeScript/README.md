@@ -5,6 +5,7 @@
 - [POO (Programação Orientada a Objetos)](./1-POO)
 - [Encapsulamento](./Encapsulamento)
 - [Inversão de Dependência](./InversaoDeDependencia)
+- [Crud TS-FullStack](./CrudTS-FullStack)
 
 ---
 
