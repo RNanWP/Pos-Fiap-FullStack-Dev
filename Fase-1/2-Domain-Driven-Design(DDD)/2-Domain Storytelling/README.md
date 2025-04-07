@@ -1,48 +1,50 @@
-# 2-Domain Driven Design (DDD)
+# 2-Domain Storytelling (DDD)
 
 ## Navegação
-- [Home](../../)  -  [TypeScript](../)  
 
-## Por que DDD?
-Apesar de DDD não ser uma metodologia de projeto, já criamos uma cultura de comunicação e documentação que vai nos ajudar a evitr os pontos supracitados.
+- [Home](../../) - [TypeScript](../)
 
+### Domain Storytelling
 
+Domain Storytelling são métodos e técnicas que utilizamos para entender melhor nossos Domínios e Subdomínios, trazendo pessoas com vários níveis de conhecimento para compartilhar suas visões em um único documento, nos dando uma visão clara do que é feito.
 
+Além disso, a Narrativa de Domínios também nos ajuda a entender como pessoas, com diferentes pontos de vista sobre algo, trabalham juntas e assim montam uma narrativa coesa e fluída.
 
- ## Design Estratégico
- Basicamente, sabendo o que queremos fazer, e poque queremos fazer, nos ajuda a entender onde queremos chegar.
+- Entender o Domínio
+- Estabelecer uma linguagem entre os Domain Expert e os IT Experts
+- Evitar mal-entendidos
+- Esclarecer os requisitos de software
+- Implementar o Software corretamente
+- Estruturar o Software
+- Desenhar processos de negócios, suportados por software, que sejam viáveis
 
- ## Domínios
- O Domínio da Escola Primária é a educação de crianças e adolescentes, por meio de ensino de conteúdos e desenvolvimento de habilidades que possam ser levados e aplicados para toda a vida. De forma mais simples, o Dominio de uma escola é a Educação
+### A Linguagem Pictográfica
 
-## Subdomíniod Principais
-Aqui iniciamos com uma questão que nos ajuda a definir um Subdominio Principal: o que faz o negócio especial, o que faz diferente dos outros? 
+É uma narrativa de domínio que são coesas e legíveis. Precisamos não apenas dos símbolos de objetos e conceitos, mas também dos simbolos de conexão/relação entre eles, e textos.
 
-Subdomínios Principais são os negócios que o deferenciam dos outros no mercado.
+### Objetos de Trabalho
+Objetos de trabalho são utilizados pelos atores. Estes podem ser documentos, objetos e interações físicas e digitais. Os atores interagem com os objetos de trabalho.
 
-**Exemplos, tais como:**
-- O Subdomínio Principal da nossa Escola são as Aulas e Metodologias.
-- O Subdomínio Principal da Netflix são os vídeos.
-- O Subdomínio Principal da Azul são os voos.
-- O Subdomínio Principal da DHL são seus serviços logísticos.
+- **Físicos:** um ticket de pedido, menu, telefone etc.
+- **Digitais:** um ticket digital, um menu digital etc.
+- **Interações:** um e-mail com uma confirmação, uma ligação telefônica para reservar algo etc.
 
-## Subdomínios Genéricos
-O Subdomínio Genérico é o conjunto de processos que são comuns no mercado, por exemplo, o portal da empresa, a loja on-line, as funções de autenticação e afins.
+### Atividades
+As atividades são as ações dos atores para com os objetos de trabalho.
 
-- Um Subdomínio Genérico da nossa Escoa é a criptografia aplicada aos dados.
-- Um Subdomínio Genérico da Netflix é a parte de faturamento.
-- Um Subdomínio Genérico da Azul é a parte de autenticação de seu portal.
-- Um Subdomínio Genérico da DHL é a contabilidade.
+Notamos que é uma ação ou direção da ação para onde as flechas de atividades apontam, indicando o fluxo da atividade.
 
-## Subdomínios de Suporte
+### Equipe de Tabalho
 
-O Subdomínio de Suporte, apoia o negócio da empresa, mas não como o Subdomínio Principal; esse não dá nenhuma vantagem estratégica para o negócio, e sim complementa o que o Subdomínio Principal faz.
+Uma sugestão de time é a seguinte:
 
-- Um Subdomínio de Suporte da nossa Escola é a gestão de dados de pais e alunos.
-- Um Subdomínio de Suporte da Netflix é o cadastro de filmes e séries.
-- Um Subdomínio de Suporte da Azul é o cadastro de pessoas no seu portal.
-- Um Subdomínio de Suporte da DHL é a integração com outros sistemas logísticos.
+- **Domain Experts:** quantos forem necessários para contar a história.
 
+- **Ouvintes:** todos que estão dispostos a aprender sobre a história, normalmente o time de desenvolvimento e mais alguns agregados.
+
+- **Moderador:** que vai conduzir as conversas, criando as lógicas de perguntas e mantendo o assunto alinhado com o que se quer atingir.
+
+- **Modelador:** que vai criar a história em linguagem pictográfica e fazer as devidas anotações
 
 <!-- ## POO
 ### [Polimorfismo](https://www.typescriptlang.org/docs/handbook/classes.html#polymorphism)
