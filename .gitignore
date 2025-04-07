@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+dist/
+.env
+
+# Configs
+package-lock.json
+package.json
+tsconfig.json
+
+# VSCode configs
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Outros
+*.env
