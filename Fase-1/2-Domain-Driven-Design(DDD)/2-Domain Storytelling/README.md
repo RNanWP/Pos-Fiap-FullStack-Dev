@@ -2,7 +2,7 @@
 
 ## Navegação
 
-- [Home](../../) - [TypeScript](../)
+- [Home](../../) - [DDD](../)
 
 ### Domain Storytelling
 
