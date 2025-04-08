@@ -21,7 +21,11 @@ Este espaço reúne meus projetos, anotações, atividades, tech challenges e de
 ```plaintext
 Pos-Fiap-FullStack-Dev/
 │
-├── Fase1/
+├──AluraEcertificados/
+│   ├── Certificados
+│   └── Git-e-GitHub1
+│
+├── Fase-1/
 │   ├── TypeScript
 │   ├── Domain Driven Design
 │   ├── Low Code Development
