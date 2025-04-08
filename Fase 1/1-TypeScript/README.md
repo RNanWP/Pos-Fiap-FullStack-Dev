@@ -1,9 +1,19 @@
 # Fase 1 - Módulo TypeScript
 
-## Navegação
+## 🌟 Navegação
 
-- [Desenvolvimento Básico](./1-Básico)
-- [POO (Programação Orientada a Objetos)](./2-POO)
+### 🏠 Principal
+- [Home](./../../../Pos-Fiap-FullStack-Dev/)
+- [Certificados Alura](./../../Alura%20&%20Certificados/)
+- [Fase 1](./../../Fase%201/)
+
+### 📂 Seções
+- [TypeScript](./../1-TypeScript/)
+- [Domain Driven Design (DDD)](./../2-Domain%20Driven%20Design%20(DDD)/)
+
+### 📂 Subseções de TypeScript
+- [Básico](./1-Básico/)
+- [POO](./2-POO/)
 
 ---
 
@@ -63,4 +73,4 @@ Aqui, discutimos como melhorar a flexibilidade do código:
 - **Princípios SOLID:** Foque na arquitetura limpa e escalável.
 - **Uso de Injeção de Dependência:** Reduza o acoplamento entre classes.
 
-[Voltar ao topo](#1-TypeScript)
+[Voltar ao topo](#fase-1---módulo-typescript)
