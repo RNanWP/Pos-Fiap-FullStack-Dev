@@ -28,3 +28,31 @@ O Domain Expert tem que falar algo que os desenvolvedores possam entender e vice
 
 ### Modelagem de Domínio
 Essa documentação é essencial para que possamos conduzir as converas com o Domain Experts e extrair tudo que é necessário para entender o problema.
+
+Ao falar de Realidade vs Desejo, será aplicado ao interarmos sobre o modelo, como o foco no que é importante, temos uma linguagem única (ubíqua) vai nos ajudar a criar um modelo mais efetivo e criar uma solução que reflete o que foi dito.
+
+---
+
+### Ferramentas
+Um bom exemplo é montarmos uma Wiki que consolida os diversos recursos.
+
+- Wiki para ser a central do projeto, consolidando todos os recursos.
+
+- Seção na Wiki com a descrição do projeto.
+
+- Seção na Wiki com o time do projeto. Devemos então criar diversas subpáginas para contemplar cada parte do projeto. Em outras palavras, uma página para cada subdomínio.
+
+- Seção na Wiki para linguagem ubíqua.
+
+- Seção na Wiki para os cenários que criamos, suas premissas e limitações.
+
+- Link para um repositório do GitHub, com os códigos do projeto e sua documentação.
+
+- Link para a Ferramenta de Gestão de Projeto.
+
+---
+
+### Contextos Delimitados
+São limites criados para organizar soluções dentro de um sistema, baseados na análise de negócios e processos. Eles ajudam a identificar domínios e subdomínios, garantindo que cada parte do sistema seja bem definida e independente. A quantidade de recursos, tamanho e complexidade de cada contexto pode variar conforme o projeto, influenciando diretamente a estrutura de desenvolvimento, como o número de equipes necessárias. Contextos delimitados podem englobar desde soluções completas até áreas mais específicas do sistema.
+
+**Contextos Delimitados** organizam sistemas em limites claros para facilitar o trabalho de equipes independentes. Cada time (como os mencionados no print: Marketing e Admissões) desenvolve sua própria linguagem ligada aos processos de negócio e à **linguagem ubíqua**. Isso reduz ambiguidades e otimiza a comunicação, com cada contexto delimitando termos, operações e propriedades únicos. Esse modelo melhora a eficiência ao permitir que equipes trabalhem em suas áreas específicas sem interferir nas outras.
