@@ -1,4 +1,4 @@
-package admissoes;
+package ddd.admissoes;
 
 class Prospectos{
    public void criarProspectos(){

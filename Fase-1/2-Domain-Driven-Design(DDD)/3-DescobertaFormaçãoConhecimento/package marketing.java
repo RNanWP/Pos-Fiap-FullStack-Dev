@@ -1,4 +1,4 @@
-package marketing;
+package ddd.marketing;
 
 class Leads{
    public void criarLeads(){
