@@ -10,9 +10,11 @@ Este espaço reúne meus projetos, anotações, atividades, tech challenges e de
 
 ## 📑 Sumário
 
-- [TypeScript](./Fase-1/1-TypeScript/)
-- [Domain Driven Design](./Fase-1/2-Domain-Driven-Design(DDD)/)
-- [Low Code Development](./Fase-1/3-Low-Code-Development/)
+- [Fase 1](./Fase%201/) | [Fase 2](./Fase%202/) | [Fase 3](./Fase%203/) | [Fase 4](./Fase%204/) | [Fase 5](./Fase%205/)
+- [Certificados Alura](./Alura%20&%20Certificados/)
+- [TypeScript](./Fase%201/1-TypeScript/)
+- [Domain Driven Design](./Fase%201/2-Domain%20Driven%20Design%20(DDD)/)
+- [Low Code Development](./Fase%201/3%20Low%20Code%20Development/)
 
 ---
 
