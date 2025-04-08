@@ -1,11 +1,9 @@
 # Fase 1 - Módulo TypeScript
-## Módulos
 
-- [Desenvolvimento Básico](./DesenvolvimentoBasico)
-- [POO (Programação Orientada a Objetos)](./1-POO)
-- [Encapsulamento](./Encapsulamento)
-- [Inversão de Dependência](./InversaoDeDependencia)
-- [Crud TS-FullStack](./CrudTS-FullStack)
+## Navegação
+
+- [Desenvolvimento Básico](./1-Básico)
+- [POO (Programação Orientada a Objetos)](./2-POO)
 
 ---
 
