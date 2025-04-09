@@ -9,42 +9,52 @@
 - [TypeScript](./../1-TypeScript/)
 - [Domain Driven Design](./../2-Domain%20Driven%20Design%20(DDD)/)
 
-## Por que DDD?
-Apesar de DDD não ser uma metodologia de projeto, já criamos uma cultura de comunicação e documentação que vai nos ajudar a evitr os pontos supracitados.
+---
 
+# Implementando Arquitetura Lógica
 
- **"O conhecimento do negócio nunca é centralizado, times de desenvolvimento precisam balancear e priorizar as necessidades e requisições de negócios de múltiplos membros do time, além de se engajar com diversar pessoas que possuem habilidades muito distintas, tudo isso com o objetivo de descobrir os requerimentos funcionais e não funcionais do software."**
+## 📜 Introdução
+No **Domain-Driven Design (DDD)**, após explorar o Design Estratégico focado no **"por quê"** e **"o que"**, avançamos para o **Design Tático**. Este estágio responde ao **"como"**, abordando conceitos como **Arquitetura** e os **Blocos de Construção** do DDD. É o momento de definir:
+- As tecnologias a serem utilizadas: Bancos relacionais ou NoSQL? Microsserviços ou Barramento de Serviços?
+- Como elas interagem para formar a base do sistema.
 
- ## Design Estratégico
- Basicamente, sabendo o que queremos fazer, e poque queremos fazer, nos ajuda a entender onde queremos chegar.
+## 📐 Arquitetura em DDD
+### Estrutura de Camadas
+O DDD organiza sua arquitetura em quatro camadas principais:
 
- ## Domínios
- O Domínio da Escola Primária é a educação de crianças e adolescentes, por meio de ensino de conteúdos e desenvolvimento de habilidades que possam ser levados e aplicados para toda a vida. De forma mais simples, o Dominio de uma escola é a Educação
+1️⃣ **Camada de Interface de Usuário**
+- Responsável pela interação com o usuário e outros sistemas (GUI, CLI, APIs).
+- Atua como a face do sistema.
 
-## Subdomíniod Principais
-Aqui iniciamos com uma questão que nos ajuda a definir um Subdominio Principal: o que faz o negócio especial, o que faz diferente dos outros? 
+2️⃣ **Camada de Aplicação**
+- Media a comunicação entre a Interface de Usuário e o Domínio.
+- **Não contém lógica de negócios**; apenas organiza tarefas e monitora alterações.
+- Exemplo: Disparar a rotina para contabilizar faltas dos alunos.
 
-Subdomínios Principais são os negócios que o deferenciam dos outros no mercado.
+3️⃣ **Camada de Domínio**
+- O **"coração do software"**, onde estão as regras de negócios e a lógica essencial.
+- Executa mudanças de estado e cálculos de negócios.
+- Exemplo: Cálculo de notas dos alunos, considerando entregas atrasadas.
 
-**Exemplos, tais como:**
-- O Subdomínio Principal da nossa Escola são as Aulas e Metodologias.
-- O Subdomínio Principal da Netflix são os vídeos.
-- O Subdomínio Principal da Azul são os voos.
-- O Subdomínio Principal da DHL são seus serviços logísticos.
+4️⃣ **Camada de Infraestrutura**
+- Suporte técnico para persistência de dados, mensageria e interação entre camadas.
+- É o alicerce das camadas superiores.
 
-## Subdomínios Genéricos
-O Subdomínio Genérico é o conjunto de processos que são comuns no mercado, por exemplo, o portal da empresa, a loja on-line, as funções de autenticação e afins.
+## 🧩 Blocos de Construção do DDD
+### 🔹 Objetos de Valor (Value Objects)
+- **Imutáveis e únicos**.
+- Descrevem algo no domínio e são comparados por igualdade de valores.
+- Exemplo: Alterar "Rua 3" para "Rua 5" cria um novo objeto.
 
-- Um Subdomínio Genérico da nossa Escoa é a criptografia aplicada aos dados.
-- Um Subdomínio Genérico da Netflix é a parte de faturamento.
-- Um Subdomínio Genérico da Azul é a parte de autenticação de seu portal.
-- Um Subdomínio Genérico da DHL é a contabilidade.
+### 🔹 Entidades (Entities)
+- **Possuem identificadores únicos (ID)** e são mutáveis.
+- Podem ser alteradas após criadas, sem a necessidade de validação de unicidade.
 
-## Subdomínios de Suporte
+### 🔹 Agregados (Aggregates)
+- Grupo de entidades e objetos de valor com consistência forçada.
+- Apenas a lógica interna do agregado pode alterar seu estado.
+- Entidades externas podem solicitar mudanças através de **comandos**, mas não alterá-lo diretamente.
 
-O Subdomínio de Suporte, apoia o negócio da empresa, mas não como o Subdomínio Principal; esse não dá nenhuma vantagem estratégica para o negócio, e sim complementa o que o Subdomínio Principal faz.
-
-- Um Subdomínio de Suporte da nossa Escola é a gestão de dados de pais e alunos.
-- Um Subdomínio de Suporte da Netflix é o cadastro de filmes e séries.
-- Um Subdomínio de Suporte da Azul é o cadastro de pessoas no seu portal.
-- Um Subdomínio de Suporte da DHL é a integração com outros sistemas logísticos.
+### 🔹 Serviços de Domínio (Domain Services)
+- Trabalham com entidades e agregados para cálculos e execução de rotinas.
+- São objetos separados e focados em lógica que transcende o escopo de um único agregado.
