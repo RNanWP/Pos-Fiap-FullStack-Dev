@@ -8,7 +8,7 @@ Este espaço reúne meus projetos, anotações, atividades, tech challenges e de
 
 ---
 
-<summary> <h3><strong>📑 Sumário </strong></h3></summary>
+<h3><strong>📑 Sumário </strong></h3>
 
 #### **Fase 1**
 - [Certificados Alura](./Alura%20&%20Certificados/)
@@ -17,22 +17,22 @@ Este espaço reúne meus projetos, anotações, atividades, tech challenges e de
 - [Low Code Development](./Fase%201/3%20Low%20Code%20Development/)
 - [Atividade Tech Challenge](./Fase%201/Atividade%20Tech%20Challenge/)
 
----
+
 
 #### **Fase 2**
 - [Conteúdo sobre Fase 2](./Fase%202/)
 
----
+
 
 #### **Fase 3**
 - [Conteúdo sobre Fase 3](./Fase%203/)
 
----
+
 
 #### **Fase 4**
 - [Conteúdo sobre Fase 4](./Fase%204/)
 
----
+
 
 #### **Fase 5**
 - [Conteúdo sobre Fase 5](./Fase%205/)
