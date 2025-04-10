@@ -10,19 +10,20 @@ Este espaço reúne meus projetos, anotações, atividades, tech challenges e de
 
 ## 📑 Sumário
 
-- [FASE 1](./Fase%201/)
+- **[FASE 1](./Fase%201/)**
 - [Certificados Alura](./Alura%20&%20Certificados/)
 - [TypeScript](./Fase%201/1-TypeScript/)
 - [Domain Driven Design](./Fase%201/2-Domain%20Driven%20Design%20(DDD)/)
 - [Low Code Development](./Fase%201/3%20Low%20Code%20Development/)
 ---
-- [FASE 2](./Fase%202/)
+- **[FASE 2](./Fase%202/)**
 ---
-- [FASE 3](./Fase%203/)
+- **[FASE 3](./Fase%203/)**
 ---
-- [FASE 4](./Fase%204/)
+- **[FASE 4](./Fase%204/)**
 ---
-- [FASE 5](./Fase%205/)
+- **[FASE 5](./Fase%205/)**
+---
 
 ## 🎯 Estrutura do Repositório
 
