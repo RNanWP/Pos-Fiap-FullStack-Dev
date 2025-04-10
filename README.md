@@ -8,7 +8,7 @@ Este espaço reúne meus projetos, anotações, atividades, tech challenges e de
 
 ---
 
-<summary> <h3><strong>📑 Sumário </strong></h3></summary>
+ <h3><strong>📑 Sumário </strong></h3>
 
 #### **Fase 1**
 - [Certificados Alura](./Alura%20&%20Certificados/)
