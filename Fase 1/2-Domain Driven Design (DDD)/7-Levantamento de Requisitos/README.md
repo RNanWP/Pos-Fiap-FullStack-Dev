@@ -11,8 +11,6 @@
 
 ---
 
-# README: Levantamento de Requisitos
-
 ## Descrição Geral
 Este documento aborda o processo de levantamento de requisitos, incluindo os riscos associados, a jornada atual e a jornada da solução proposta, com foco em um exemplo prático de sistema de gestão de tarefas colaborativas.
 
