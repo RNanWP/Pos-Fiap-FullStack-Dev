@@ -94,12 +94,55 @@ git status
 
 ```
 git log
-```
 
+
+# Aqui estão algumas variações do comando git log que podem ser úteis:
+
+Exibir Alterações Detalhadas: git log -p
+Exibir Apenas Mensagens de Commit: git log --oneline
+```
 ---
 
 **Visualizar os repositórios remotos linkados com o repositório local, utilizando o comando**
 
 ```
 git remote
+```
+
+---
+
+**O comando git reset permite redefinir a posição da branch atual para um commit anterior, removendo os commits posteriores do histórico. <br><br>**
+O --soft mantém as mudanças no staging area, enquanto o --mixed desfaz as mudanças no staging, mas mantém as alterações no diretório de trabalho. Já o --hard descarta todas as mudanças, tanto no staging quanto no diretório de trabalho, então é importante usá-lo com cautela.
+
+```
+git reset --hard <id_do_commit_anterior>
+
+git reset --hard <hash-do-ultimo-commit-a-manter>
+
+# Se você apenas deseja desfazer commits, mas manter as alterações no diretório de trabalho, você pode usar 
+
+git reset --soft
+
+git reset --mixed
+
+```
+
+---
+
+**Para alterar informações do último commit, como o texto da mensagem:**
+
+``` plaintext
+git commit --amend -m “NOVA MENSAGEM”
+```
+
+---
+
+**Para reverter automaticamente as mudanças feitas no último commit sem excluir o histórico:**
+
+```
+git revert <hash-do-commit>
+
+# Se você precisar reverter uma série de commits, pode utilizar o seguinte comando:
+
+git revert -n <hash-do-ultimo-commit-a-manter>
 ```
