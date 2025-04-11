@@ -10,21 +10,21 @@ Este espaço reúne meus projetos, anotações, atividades, tech challenges e de
 
 <h3><strong>📑 Sumário </strong></h3>
 
-#### **Fase 1**
-- [Certificados Alura](./Alura%20&%20Certificados/)
+#### 📘 **Fase 1**
 - [TypeScript](./Fase%201/1-TypeScript/)
 - [Domain Driven Design (DDD)](./Fase%201/2-Domain%20Driven%20Design%20(DDD)/)
 - [Low Code Development](./Fase%201/3%20Low%20Code%20Development/)
 - [Atividade Tech Challenge](./Fase%201/Atividade%20Tech%20Challenge/)
+- [Certificados Alura](./Alura%20&%20Certificados/)
 
 
 
-#### **Fase 2**
+#### 🚀 **Fase 2**
 - [Conteúdo sobre Fase 2](./Fase%202/)
 
 
 
-#### **Fase 3**
+#### 🌟 **Fase 3**
 - [Conteúdo sobre Fase 3](./Fase%203/)
 
 
