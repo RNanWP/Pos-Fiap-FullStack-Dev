@@ -9,7 +9,7 @@
 - [Domain Driven Design](./../../Fase%201/2-Domain%20Driven%20Design%20(DDD)/)
 
 ---
-**Nunca realizar um commit de um código que você sabe que contém bugs.**
+**Nunca realizar um commit de um código que você sabe que contém bugs.**<br>
  O ideal é que o commit contenha somente código funcional.
 ---
 
@@ -99,7 +99,13 @@ git log
 # Aqui estão algumas variações do comando git log que podem ser úteis:
 
 Exibir Alterações Detalhadas: git log -p
+
 Exibir Apenas Mensagens de Commit: git log --oneline
+```
+
+**Para criar um arquivo chamado logs.txt contendo os logs de commits:**
+```
+git log > logs.txt
 ```
 ---
 
