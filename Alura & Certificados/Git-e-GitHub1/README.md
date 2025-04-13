@@ -152,3 +152,14 @@ git revert <hash-do-commit>
 
 git revert -n <hash-do-ultimo-commit-a-manter>
 ```
+
+1. Para começar a explorar os comandos que exibem a visualização de alterações no projeto, utilize o comando ```git log``` com os seguintes parâmetros:
+
+ - **```-p```** para visualizar as alterações em cada arquivo modificado;
+ - **```--oneline```** para visualizar cada commit de forma resumida em uma única linha;
+ - **```--graph```** para visualizar a linha do tempo dos commits com suas ramificações;
+ - **```--pretty``` ou ```--format```** para especificar com detalhes o que será exibido.
+
+ 2. Na sequência, execute ```git show``` para visualizar o trabalho realizado em algum commit específico
+
+ 3. Por fim, com ```git diff```, exiba a diferença entre 2 pontos da linha do tempo de nosso repositório.
