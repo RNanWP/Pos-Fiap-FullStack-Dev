@@ -1,9 +1,10 @@
-import { IGetUsersController } from "./protocols";
+// import { IGetUsersController } from "./protocols";
 
-export class GetUsersController implements IGetUsersController {
-  handle(): any;
-}
+// export class GetUsersController implements IGetUsersController {
+//   constructor()
+//   handle(): any;
+// }
 
-export interface IGetUsersRepository {
+// export interface IGetUsersRepository {
    
-}
+// }

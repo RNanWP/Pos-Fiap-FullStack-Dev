@@ -1,5 +1,6 @@
 import express from "express";
 import { config } from "dotenv";
+import routes from "./routes";
 
 config();
 
@@ -7,8 +8,7 @@ const app = express();
 
 const port = process.env.PORT || 3333;
 
-app.get("/", (request, response) => {
-  response.send("hello world");
-});
+app.use(express.json());
+app.use("/users", routes);
 
-app.listen(port, () => console.log(`listening on port ${port}!`));
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}!`));
