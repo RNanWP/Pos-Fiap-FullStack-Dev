@@ -6,6 +6,7 @@ const LivroSchema = new Schema({
   isbn: { type: Number, required: true },
   ano: { type: Number, required: true },
   editora: { type: String },
+  capa: { type: String },
 });
 
 export const Livro = model("Livro", LivroSchema);

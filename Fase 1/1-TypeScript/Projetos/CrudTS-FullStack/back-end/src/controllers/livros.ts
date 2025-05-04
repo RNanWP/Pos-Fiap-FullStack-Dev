@@ -3,7 +3,16 @@ import { Livro } from "../models/Livro";
 
 export const criarLivro = async (req: Request, res: Response) => {
   try {
-    const novoLivro = new Livro(req.body);
+    const { titulo, autor, isbn, ano, editora, capa } = req.body;
+    const novoLivro = new Livro({
+      titulo,
+      autor,
+      isbn,
+      ano,
+      editora,
+      capa,
+    });
+
     await novoLivro.save();
     res.status(201).json(novoLivro);
   } catch (err) {
@@ -19,17 +28,17 @@ export const listarLivros = async (_: Request, res: Response) => {
 export const buscarLivroPorId = async (
   req: Request,
   res: Response
-): Promise<void> => {
+): Promise<any> => {
   try {
     const livro = await Livro.findById(req.params.id);
     if (!livro) {
-      res.status(404).json({ erro: "Livro não encontrado" });
-      return;
+      return res.status(404).json({ erro: "Livro não encontrado" });
     }
-
-    res.json(livro);
+    return res.json(livro);
   } catch (err) {
-    res.status(400).json({ erro: "Erro ao buscar livro", detalhes: err });
+    return res
+      .status(400)
+      .json({ erro: "Erro ao buscar livro", detalhes: err });
   }
 };
 
