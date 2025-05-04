@@ -16,6 +16,23 @@ export const listarLivros = async (_: Request, res: Response) => {
   res.json(livros);
 };
 
+export const buscarLivroPorId = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  try {
+    const livro = await Livro.findById(req.params.id);
+    if (!livro) {
+      res.status(404).json({ erro: "Livro não encontrado" });
+      return;
+    }
+
+    res.json(livro); // ✅ só envia a resposta
+  } catch (err) {
+    res.status(400).json({ erro: "Erro ao buscar livro", detalhes: err });
+  }
+};
+
 export const atualizarLivro = async (req: Request, res: Response) => {
   try {
     const livroAtualizado = await Livro.findByIdAndUpdate(

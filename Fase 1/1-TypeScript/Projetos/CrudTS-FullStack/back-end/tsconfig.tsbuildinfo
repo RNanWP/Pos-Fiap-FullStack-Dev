@@ -1,0 +1,1 @@
+{"root":["./src/server.ts","./src/config/mongo.ts","./src/controllers/livros.ts","./src/models/livro.ts","./src/routes/livrosroutes.ts"],"errors":true,"version":"5.8.3"}
