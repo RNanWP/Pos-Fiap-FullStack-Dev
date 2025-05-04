@@ -11,6 +11,7 @@ const EditBook = () => {
   const [isbn, setIsbn] = useState("");
   const [ano, setAno] = useState("");
   const [editora, setEditora] = useState("");
+  const [imagem, setImagem] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,6 +34,7 @@ const EditBook = () => {
         isbn,
         ano: Number(ano),
         editora,
+        imagem,
       });
       alert("Livro atualizado com sucesso!");
       navigate("/");
@@ -90,7 +92,7 @@ const EditBook = () => {
         <select
           value={ano}
           onChange={(e) => setAno(e.target.value)}
-          className="form-input--ano"
+          className="form-input"
         >
           <option value="">Selecione o ano</option>
           {Array.from({ length: 100 }, (_, i) => {
@@ -110,6 +112,41 @@ const EditBook = () => {
           onChange={(e) => setEditora(e.target.value)}
           className="form-input"
         />
+
+        <label className="form-label">URL da imagem</label>
+        <input
+          type="text"
+          placeholder="https://exemplo.com/imagem.jpg"
+          value={imagem}
+          onChange={(e) => setImagem(e.target.value)}
+          className="form-input"
+        />
+
+        <label className="form-label">Ou selecione uma imagem</label>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={async (e) => {
+            const file = e.target.files?.[0];
+            if (file) {
+              const formData = new FormData();
+              formData.append("imagem", file);
+
+              try {
+                const response = await api.post("/upload", formData, {
+                  headers: { "Content-Type": "multipart/form-data" },
+                });
+
+                setImagem(response.data.url); // salva a URL recebida
+              } catch (err) {
+                alert("Erro ao enviar imagem.");
+                console.error(err);
+              }
+            }
+          }}
+          className="form-input"
+        />
+
         <button type="submit" className="form-button">
           Salvar
         </button>

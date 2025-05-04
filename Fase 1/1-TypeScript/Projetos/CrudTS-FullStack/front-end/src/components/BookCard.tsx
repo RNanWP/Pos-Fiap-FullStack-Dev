@@ -25,31 +25,37 @@ const BookCard = ({ book, onDelete }: BookCardProps) => {
   };
 
   return (
-    <div className="book-card">
-      <h3 className="book-title">{book.titulo}</h3>
-      <p>
-        <strong>Autor:</strong> {book.autor}
-      </p>
-      <p>
-        <strong>ISBN:</strong> {book.isbn}
-      </p>
-      <p>
-        <strong>Ano:</strong> {book.ano}
-      </p>
-      <p>
-        <strong>Editora:</strong> {book.editora}
-      </p>
+    <div className="book-card__container">
+      <div className="book-card">
+        {/* Imagem do livro */}
+        {book.imagemUrl && (
+          <img src={book.imagemUrl} alt={book.titulo} className="book-image" />
+        )}
+        <h3 className="book-title">{book.titulo}</h3>
+        <p>
+          <strong>Autor:</strong> {book.autor}
+        </p>
+        <p>
+          <strong>ISBN:</strong> {book.isbn}
+        </p>
+        <p>
+          <strong>Ano:</strong> {book.ano}
+        </p>
+        <p>
+          <strong>Editora:</strong> {book.editora}
+        </p>
 
-      <div className="button-group">
-        {/* Botão Editar */}
-        <Link to={`/editar/${book._id!}`} className="btn edit-btn">
-          Editar
-        </Link>
+        <div className="button-group">
+          {/* Botão Editar */}
+          <Link to={`/editar/${book._id!}`} className="btn edit-btn">
+            Editar
+          </Link>
 
-        {/* Botão Excluir */}
-        <button onClick={handleDelete} className="btn delete-btn">
-          Excluir
-        </button>
+          {/* Botão Excluir */}
+          <button onClick={handleDelete} className="btn delete-btn">
+            Excluir
+          </button>
+        </div>
       </div>
     </div>
   );

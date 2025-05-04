@@ -1,9 +1,14 @@
-#root {
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f4f6;
   font-family: "Montserrat", sans-serif;
   height: 100svh;
   display: flex;
   flex-direction: column;
-  background: #f3f4f6;
 }
 
 /* HEADER */
@@ -83,6 +88,10 @@ header nav a {
 }
 
 /* CARD DO LIVRO */
+
+.book-card__container {
+}
+
 .book-card {
   display: flex;
   background-color: white;
@@ -97,6 +106,14 @@ header nav a {
 
 .book-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Limita a altura das imagens */
+  object-fit: cover; /* Garante que a imagem seja cortada sem distorcer */
+  border-radius: 8px;
 }
 
 .book-title {
@@ -181,15 +198,15 @@ header nav a {
   transition: all 0.2s ease-in-out;
 }
 
-.form-input--ano {
+/* .form-input--ano {
   width: 100%;
-  max-width: 535px;
+  max-width: 500px;
   padding: 0.75rem 1rem;
   border: 1px solid #d1d5db;
   border-radius: 0.5rem;
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 .form-input:focus {
   outline: none;
