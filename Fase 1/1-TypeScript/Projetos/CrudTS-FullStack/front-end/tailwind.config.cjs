@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // para React/Vite
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},

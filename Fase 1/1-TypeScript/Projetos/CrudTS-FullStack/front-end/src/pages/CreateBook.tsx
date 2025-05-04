@@ -20,7 +20,7 @@ const CreateBook = () => {
     }
 
     try {
-      await api.post("/books", {
+      await api.post("/livros", {
         titulo,
         autor,
         isbn,
@@ -30,8 +30,11 @@ const CreateBook = () => {
 
       alert("Livro cadastrado com sucesso!");
       navigate("/");
-    } catch (error) {
-      console.error(error);
+    } catch (error: any) {
+      console.error(
+        "Erro ao cadastrar:",
+        error.response?.data || error.message
+      );
       alert("Erro ao cadastrar livro.");
     }
   };

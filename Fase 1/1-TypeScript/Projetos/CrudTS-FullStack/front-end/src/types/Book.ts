@@ -1,5 +1,5 @@
 export interface Book {
-  _id?: string | undefined;
+  _id?: string;
   titulo: string;
   autor: string;
   isbn: string;
