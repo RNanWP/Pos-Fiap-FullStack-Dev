@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Livro } from "../models/Livro";
+import { Livro } from "../models/LivroSchema";
 
 export const criarLivro = async (req: Request, res: Response) => {
   try {
@@ -28,17 +28,15 @@ export const listarLivros = async (_: Request, res: Response) => {
 export const buscarLivroPorId = async (
   req: Request,
   res: Response
-): Promise<any> => {
+): Promise<void> => {
   try {
     const livro = await Livro.findById(req.params.id);
     if (!livro) {
-      return res.status(404).json({ erro: "Livro não encontrado" });
+      res.status(404).json({ erro: "Livro não encontrado" });
     }
-    return res.json(livro);
+    res.json(livro);
   } catch (err) {
-    return res
-      .status(400)
-      .json({ erro: "Erro ao buscar livro", detalhes: err });
+    res.status(400).json({ erro: "Erro ao buscar livro", detalhes: err });
   }
 };
 
