@@ -7,7 +7,7 @@ const Home = () => {
   const [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
-    api.get("/books").then((res) => setBooks(res.data));
+    api.get("/livros").then((res) => setBooks(res.data));
   }, []);
 
   const handleDelete = (id: string) => {
@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="book-grid">
       {books.map((book) => (
         <BookCard key={book._id} book={book} onDelete={handleDelete} />
       ))}

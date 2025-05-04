@@ -14,7 +14,7 @@ const EditBook = () => {
 
   useEffect(() => {
     api
-      .get(`/books/${id}`)
+      .get(`/livros/${id}`)
       .then((res) => {
         const { titulo, autor, isbn, ano, editora } = res.data;
         setTitulo(titulo);
@@ -33,7 +33,7 @@ const EditBook = () => {
     e.preventDefault();
 
     try {
-      await api.put(`/books/${id}`, {
+      await api.put(`/livros/${id}`, {
         titulo,
         autor,
         isbn,
@@ -49,48 +49,45 @@ const EditBook = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-4 bg-white mt-6 rounded shadow">
-      <h2 className="text-2xl font-bold mb-4">Editar Livro</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="form-container">
+      <h2 className="form-title">Editar Livro</h2>
+      <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
           placeholder="Título"
           value={titulo}
           onChange={(e) => setTitulo(e.target.value)}
-          className="w-full border p-2 rounded"
+          className="form-input"
         />
         <input
           type="text"
           placeholder="Autor"
           value={autor}
           onChange={(e) => setAutor(e.target.value)}
-          className="w-full border p-2 rounded"
+          className="form-input"
         />
         <input
-          type="text"
+          type="number"
           placeholder="ISBN"
           value={isbn}
           onChange={(e) => setIsbn(e.target.value)}
-          className="w-full border p-2 rounded"
+          className="form-input"
         />
         <input
           type="number"
           placeholder="Ano de publicação"
           value={ano}
           onChange={(e) => setAno(e.target.value)}
-          className="w-full border p-2 rounded"
+          className="form-input"
         />
         <input
           type="text"
           placeholder="Editora"
           value={editora}
           onChange={(e) => setEditora(e.target.value)}
-          className="w-full border p-2 rounded"
+          className="form-input"
         />
-        <button
-          type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-        >
+        <button type="submit" className="form-button-green">
           Salvar Alterações
         </button>
       </form>

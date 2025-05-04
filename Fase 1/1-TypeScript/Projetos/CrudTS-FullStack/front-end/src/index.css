@@ -1,7 +1,202 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+#root {
+  font-family: "Montserrat", sans-serif;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: #f3f4f6;
+}
 
-body {
-  @apply bg-gray-100 text-gray-800;
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(252, 252, 252);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-create {
+  background-color: #89cff0;
+  color: rgb(0, 0, 0);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-create:hover {
+  background-color: #4682b4;
+}
+
+.book-grid {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .book-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.book-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-title {
+  font-size: 1.125rem; /* equivalente ao text-lg */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.button-group {
+  margin-top: 0.75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 0.375rem;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #f59e0b;
+  padding: 14px 24px;
+  background: linear-gradient(90deg, #fbbf24, #d88900);
+  transition: background 0.4s ease-in-out;
+}
+
+.edit-btn:hover {
+  background: linear-gradient(90deg, #f59e0b, #ff9419);
+}
+
+.delete-btn {
+  background: linear-gradient(90deg, #f87171, #b80000);
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(90deg, #c21010, #f87171);
+}
+
+.book-card {
+  background-color: rgb(252, 252, 252);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-title {
+  font-size: 1.355rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.button-group {
+  margin-top: 0.75rem;
+}
+
+/* */
+
+.form-container {
+  max-width: 640px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.form-button {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #1e40af;
+}
+
+form-button-green {
+  background-color: #16a34a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.form-button-green:hover {
+  background-color: #15803d;
 }
