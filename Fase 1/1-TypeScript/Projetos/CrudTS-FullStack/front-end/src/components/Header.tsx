@@ -7,8 +7,9 @@ const Header = () => {
         <Link to="/">📚 CRUD LIBRARY</Link>
       </h1>
       <nav>
+        <Link to="/">Início</Link>
         <Link to="/criar" className="btn-create">
-          Adicionar livro
+          Novo Livro
         </Link>
       </nav>
     </header>

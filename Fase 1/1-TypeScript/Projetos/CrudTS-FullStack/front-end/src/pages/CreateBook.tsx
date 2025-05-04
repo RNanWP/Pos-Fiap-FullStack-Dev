@@ -62,18 +62,29 @@ const CreateBook = () => {
         />
         <input
           type="number"
-          placeholder="ISBN*(Somente números)"
+          placeholder="ISBN* (Somente números)"
           value={isbn}
-          onChange={(e) => setIsbn(e.target.value)}
+          onChange={(e) => {
+            const value = e.target.value;
+            if (/^\d*$/.test(value)) setIsbn(value);
+          }}
           className="form-input"
         />
-        <input
-          type="number"
-          placeholder="Ano de publicação*"
+        <select
           value={ano}
           onChange={(e) => setAno(e.target.value)}
-          className="form-input"
-        />
+          className="form-input--ano"
+        >
+          <option value="">Selecione o ano</option>
+          {Array.from({ length: 100 }, (_, i) => {
+            const year = new Date().getFullYear() - i;
+            return (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            );
+          })}
+        </select>
         <input
           type="text"
           placeholder="Editora (opcional)"

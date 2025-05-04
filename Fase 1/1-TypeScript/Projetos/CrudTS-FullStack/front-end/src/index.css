@@ -8,12 +8,31 @@
 
 /* HEADER */
 .header {
+  color: black;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+
   background-color: rgb(252, 252, 252);
   border-bottom: 1px solid #e5e7eb;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header nav a {
+  color: black;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #00a8ff;
 }
 
 .header-title {
@@ -153,7 +172,17 @@
 
 .form-input {
   width: 100%;
-  max-width: 500px; 
+  max-width: 500px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-input--ano {
+  width: 100%;
+  max-width: 535px;
   padding: 0.75rem 1rem;
   border: 1px solid #d1d5db;
   border-radius: 0.5rem;

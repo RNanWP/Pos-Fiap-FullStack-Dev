@@ -15,6 +15,18 @@ const Home = () => {
     setBooks(books.filter((book) => book._id !== id));
   };
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    api
+      .get("/livros")
+      .then((res) => setBooks(res.data))
+      .catch(() => alert("Erro ao carregar livros."))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <p>Carregando livros...</p>;
+
   return (
     <div className="book-grid">
       {books.map((book) => (
