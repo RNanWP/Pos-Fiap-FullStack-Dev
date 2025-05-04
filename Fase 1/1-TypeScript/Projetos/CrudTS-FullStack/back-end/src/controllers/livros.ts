@@ -27,7 +27,7 @@ export const buscarLivroPorId = async (
       return;
     }
 
-    res.json(livro); // ✅ só envia a resposta
+    res.json(livro); // só envia a resposta
   } catch (err) {
     res.status(400).json({ erro: "Erro ao buscar livro", detalhes: err });
   }
