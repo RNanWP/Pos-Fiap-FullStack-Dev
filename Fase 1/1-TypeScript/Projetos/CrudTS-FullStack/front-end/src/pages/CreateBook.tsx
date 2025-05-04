@@ -2,7 +2,6 @@ import { useState } from "react";
 import { api } from "../api/api";
 import { useNavigate } from "react-router-dom";
 
-
 const CreateBook = () => {
   const navigate = useNavigate();
 
@@ -15,8 +14,14 @@ const CreateBook = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!titulo || !autor || !isbn || !ano) {
-      alert("Preencha todos os campos obrigatórios.");
+    if (
+      !titulo.trim() ||
+      !autor.trim() ||
+      !isbn.trim() ||
+      !ano.trim() ||
+      !editora.trim()
+    ) {
+      alert("Preencha todos os campos antes de salvar.");
       return;
     }
 
@@ -39,7 +44,7 @@ const CreateBook = () => {
 
   return (
     <div className="form-container">
-      <h2 className="form-title">Cadastrar Livro</h2>
+      <h2 className="form-title">Cadastrar livro</h2>
       <form onSubmit={handleSubmit} className="form">
         <input
           type="text"

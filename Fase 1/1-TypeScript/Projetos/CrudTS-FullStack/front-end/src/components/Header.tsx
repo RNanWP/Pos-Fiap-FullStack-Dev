@@ -8,7 +8,7 @@ const Header = () => {
       </h1>
       <nav>
         <Link to="/criar" className="btn-create">
-          Adicionar Livro
+          Adicionar livro
         </Link>
       </nav>
     </header>

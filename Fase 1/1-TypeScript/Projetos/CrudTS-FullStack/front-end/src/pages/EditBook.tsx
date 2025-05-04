@@ -12,25 +12,19 @@ const EditBook = () => {
   const [ano, setAno] = useState("");
   const [editora, setEditora] = useState("");
 
-  useEffect(() => {
-    api
-      .get(`/livros/${id}`)
-      .then((res) => {
-        const { titulo, autor, isbn, ano, editora } = res.data;
-        setTitulo(titulo);
-        setAutor(autor);
-        setIsbn(isbn);
-        setAno(String(ano));
-        setEditora(editora);
-      })
-      .catch(() => {
-        alert("Erro ao carregar dados do livro.");
-        navigate("/");
-      });
-  }, [id]);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (
+      !titulo.trim() ||
+      !autor.trim() ||
+      !isbn.trim() ||
+      !ano.trim() ||
+      !editora.trim()
+    ) {
+      alert("Preencha todos os campos antes de salvar.");
+      return;
+    }
 
     try {
       await api.put(`/livros/${id}`, {
@@ -47,6 +41,23 @@ const EditBook = () => {
       alert("Erro ao atualizar livro.");
     }
   };
+
+  useEffect(() => {
+    api
+      .get(`/livros/${id}`)
+      .then((res) => {
+        const { titulo, autor, isbn, ano, editora } = res.data;
+        setTitulo(titulo);
+        setAutor(autor);
+        setIsbn(isbn);
+        setAno(String(ano));
+        setEditora(editora);
+      })
+      .catch(() => {
+        alert("Erro ao carregar dados do livro.");
+        navigate("/");
+      });
+  }, [id]);
 
   return (
     <div className="form-container">
@@ -87,8 +98,8 @@ const EditBook = () => {
           onChange={(e) => setEditora(e.target.value)}
           className="form-input"
         />
-        <button type="submit" className="form-button-green">
-          Salvar Alterações
+        <button type="submit" className="form-button">
+          Salvar
         </button>
       </form>
     </div>
