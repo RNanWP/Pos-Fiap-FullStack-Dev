@@ -92,6 +92,7 @@ header nav a {
   transition: box-shadow 0.3s ease;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 }
 
 .book-card:hover {
@@ -101,11 +102,11 @@ header nav a {
 .book-title {
   font-size: 1.325rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin: auto;
 }
 
 .button-group {
-  margin-top: 0.75rem;
+  margin: auto;
 }
 
 /* BOTÕES */
@@ -214,18 +215,47 @@ header nav a {
   background-color: #1e40af;
 }
 
-form-button-green {
-  background-color: #16a34a;
-  color: white;
-  padding: 0.75rem;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s ease;
+.search-input {
+  display: flex;
+  margin: 14px auto 0px;
+  padding: 1rem;
+  max-width: 600px;
+  width: 90%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.form-button-green:hover {
-  background-color: #15803d;
+/* Estilo da paginação */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 0.5rem;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.pagination .active {
+  background: #1d4ed8;
+  color: white;
+  border-color: #1d4ed8;
 }
