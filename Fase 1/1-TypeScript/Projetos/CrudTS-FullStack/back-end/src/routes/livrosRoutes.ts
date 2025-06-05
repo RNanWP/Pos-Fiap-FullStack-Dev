@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { upload } from "../config/multer";
 import {
   criarLivro,
   listarLivros,
@@ -10,10 +9,10 @@ import {
 
 const router = Router();
 
-router.post("/", upload.single("imagem"), criarLivro);
+router.post("/", criarLivro);
 router.get("/", listarLivros);
 router.get("/:id", buscarLivroPorId);
-router.put("/:id", upload.single("imagem"), atualizarLivro);
+router.put("/:id", atualizarLivro);
 router.delete("/:id", deletarLivro);
 
 export default router;

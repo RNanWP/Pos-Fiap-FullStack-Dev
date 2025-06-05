@@ -14,6 +14,7 @@ const EditBook = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Enviando...");
 
     if (
       !titulo.trim() ||
@@ -30,7 +31,7 @@ const EditBook = () => {
       await api.put(`/livros/${id}`, {
         titulo,
         autor,
-        isbn,
+        isbn: Number(isbn),
         ano: Number(ano),
         editora,
       });
@@ -49,7 +50,7 @@ const EditBook = () => {
         const { titulo, autor, isbn, ano, editora } = res.data;
         setTitulo(titulo);
         setAutor(autor);
-        setIsbn(isbn);
+        setIsbn(String(isbn));
         setAno(String(ano));
         setEditora(editora);
       })
@@ -110,8 +111,9 @@ const EditBook = () => {
           onChange={(e) => setEditora(e.target.value)}
           className="form-input"
         />
+
         <button type="submit" className="form-button">
-          Salvar
+          Editar
         </button>
       </form>
     </div>

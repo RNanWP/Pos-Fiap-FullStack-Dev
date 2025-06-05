@@ -10,7 +10,6 @@ export const criarLivro = async (req: Request, res: Response) => {
       isbn,
       ano,
       editora,
-      capa,
     });
 
     await novoLivro.save();
