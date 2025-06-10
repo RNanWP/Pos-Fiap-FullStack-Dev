@@ -19,6 +19,13 @@
 
 ### O que é?
 
+## Observações
+
+- CPU: uso total de CPU
+- NET I/O: banda larga 
+- Block I/o: Basicamente o Disco onde está o container
+
+
 O Docker possui diversos comandos. 
 O primeiro comando é o "Docker container", usado para obter informações sobre os containers que estão rodando e aé mesmo os que não estão rodando mais.
 
