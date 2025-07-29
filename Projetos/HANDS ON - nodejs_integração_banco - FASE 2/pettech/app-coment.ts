@@ -7,3 +7,6 @@
 //
 //
 //
+// INSTALAÇÕES
+// 
+// npx eslint init
