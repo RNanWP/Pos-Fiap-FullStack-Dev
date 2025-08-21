@@ -15,8 +15,8 @@ Bem-vindo ao **MeuApp**, uma aplicação desenvolvida em React utilizando Vite, 
 
 ## 🖼️ Demonstração
 
-![Demonstração do MeuApp](https://user-images.githubusercontent.com/0000000/demo-meuapp.png)
-<sub>_Imagem ilustrativa. Personalize com um print do seu app!_</sub>
+<!-- ![Demonstração do MeuApp](https://user-images.githubusercontent.com/0000000/demo-meuapp.png)
+<sub>_Imagem ilustrativa. Personalize com um print do seu app!_</sub> -->
 
 ---
 
