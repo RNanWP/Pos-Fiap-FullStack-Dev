@@ -1,6 +1,6 @@
 import { useState } from "react";
-import TaskList from "./components/TaksList/TaskList";
-import AddTask from "./components/AddTask/AddTask";
+import TaskList from "./components/pages/TaksList/TaskList";
+import AddTask from "./components/pages/AddTask/AddTask";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import "./App.css";
@@ -18,13 +18,17 @@ function App() {
     setTasks([...tasks, { id: tasks.length + 1, name: taskName }]);
   };
 
+  const removeTask = (taskId: number) => {
+    setTasks(tasks.filter((task) => task.id !== taskId));
+  };
+
   return (
     <div className="app-container">
       <Header />
       <Main>
-        <h1>Task List</h1>
+        <h1>Pendências</h1>
         <AddTask onAddTask={addTask} />
-        <TaskList tasks={tasks} />
+        <TaskList tasks={tasks} onRemoveTask={removeTask} />
       </Main>
       <Footer />
     </div>
