@@ -1,19 +1,22 @@
 {
   "tasks": [
     {
-      "id": 1,
+      "id": "6996",
       "name": "Estudar React",
-      "completed": false
+      "completed": true,
+      "completedAt": "2025-08-31T16:40:15.856Z"
     },
     {
-      "id": 2,
+      "id": "555c",
       "name": "Fazer compras",
-      "completed": true
+      "completed": false,
+      "completedAt": null
     },
     {
-      "id": 3,
+      "id": "296d",
       "name": "Ler um livro",
-      "completed": false
+      "completed": true,
+      "completedAt": "2025-08-31T16:40:16.652Z"
     }
   ]
 }
