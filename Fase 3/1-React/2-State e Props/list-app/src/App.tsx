@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from "react";
+import { useReducer, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TaskList from "./components/pages/TaksList/TaskList";
 import AddTask from "./components/pages/AddTask/AddTask";
