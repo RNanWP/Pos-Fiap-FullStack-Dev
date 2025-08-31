@@ -1,33 +1,63 @@
-import { useState, useReducer } from "react";
+import React, { useState, useReducer, useEffect } from "react";
 import TaskList from "./components/pages/TaksList/TaskList";
 import AddTask from "./components/pages/AddTask/AddTask";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
-import "./App.css";
 import Footer from "./components/Footer/Footer";
 import taskReducer from "./reducers/taksReducer";
-
-interface Task {
-  id: number;
-  name: string;
-  completed: boolean;
-}
+import api from "./api";
+import "./App.css";
 
 const initialState = { tasks: [] };
 
 function App() {
   const [state, dispatch] = useReducer(taskReducer, initialState);
 
+  useEffect(() => {
+    api
+      .get("/tasks")
+      .then((response) => {
+        dispatch({ type: "SET_TASKS", payload: response.data });
+      })
+      .catch((error) => {
+        console.error("Error fetching tasks:", error);
+      });
+  }, []);
+
   const addTask = (taskName: string) => {
-    dispatch({ type: "ADD_TASK", payload: taskName });
+    api
+      .post("/tasks", { name: taskName, completed: false })
+      .then((response) => {
+        dispatch({ type: "ADD_TASK", payload: response.data });
+      })
+      .catch((error) => {
+        console.error("Error adding task:", error);
+      });
   };
 
   const removeTask = (taskId: number) => {
-    dispatch({ type: "REMOVE_TASK", payload: taskId });
+    api
+      .delete(`/tasks/${taskId}`)
+      .then(() => {
+        dispatch({ type: "REMOVE_TASK", payload: taskId });
+      })
+      .catch((error) => {
+        console.error("Error removing task:", error);
+      });
   };
 
   const toggleTask = (taskId: number) => {
-    dispatch({ type: "TOGGLE_TASK", payload: taskId });
+    const task = state.tasks.find((task) => task.id === taskId);
+    if (task) {
+      api
+        .put(`/tasks/${taskId}`, { ...task, completed: !task.completed })
+        .then((response) => {
+          dispatch({ type: "TOGGLE_TASK", payload: taskId });
+        })
+        .catch((error) => {
+          console.error("Error toggling task:", error);
+        });
+    }
   };
 
   return (

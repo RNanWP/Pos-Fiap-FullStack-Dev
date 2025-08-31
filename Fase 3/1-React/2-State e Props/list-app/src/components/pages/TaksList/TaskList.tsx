@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface TaskListProps {
   tasks: { id: number; name: string; completed: boolean }[];
@@ -21,7 +21,7 @@ const ListItem = styled.li<{ completed: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-decoration: ${({ completed }) => (completed ? 'line-through' : 'none')};
+  text-decoration: ${({ completed }) => (completed ? "line-through" : "none")};
 `;
 
 const TaskInfo = styled.div`
@@ -60,11 +60,11 @@ const Button = styled.button`
   }
 `;
 
-const TaskList: React.FC<TaskListProps> = ({ tasks, onRemoveTask, onToggleTask }) => {
-  useEffect(() => {
-    console.log('A lista de tarefas foi atualizada:', tasks);
-  }, [tasks]);
-
+const TaskList: React.FC<TaskListProps> = ({
+  tasks,
+  onRemoveTask,
+  onToggleTask,
+}) => {
   return (
     <List>
       {tasks.map((task) => (

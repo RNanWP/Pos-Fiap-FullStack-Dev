@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Estudar React",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "name": "Fazer compras",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "name": "Ler um livro",
+      "completed": false
+    }
+  ]
+}
