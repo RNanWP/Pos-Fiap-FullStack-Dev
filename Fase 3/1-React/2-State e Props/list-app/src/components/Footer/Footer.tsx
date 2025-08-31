@@ -14,7 +14,7 @@ const FooterContainer = styled.footer`
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      <p>Direitos autorais © 2024</p>
+      <p>Direitos autorais de Renan Oliveira, Pós-Tech © 2025</p>
     </FooterContainer>
   );
 };

@@ -79,7 +79,7 @@ function App() {
               path="/"
               element={
                 <>
-                  <h1>Pendências</h1>
+                  <h1>Tarefas</h1>
                   <AddTask onAddTask={addTask} />
                   <TaskList
                     tasks={state.tasks}
