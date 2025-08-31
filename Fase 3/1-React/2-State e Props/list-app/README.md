@@ -91,5 +91,5 @@ A maneira mais fácil de simular o back-end que este projeto espera é usando o 
 ---
 
 <p align="center">
-  Feito com ❤️ por [Seu Nome]
+  Feito com ❤️ por [Renan Oliveira]
 </p>
