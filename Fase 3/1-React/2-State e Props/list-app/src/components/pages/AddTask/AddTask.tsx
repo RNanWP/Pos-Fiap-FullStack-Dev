@@ -45,7 +45,7 @@ const AddTask: React.FC<AddTaskProps> = ({ onAddTask }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onAddTask(taskName);
-    setTaskName("");
+    setTaskName(""); // Limpa o campo após adicionar
   };
   return (
     <Form onSubmit={handleSubmit}>
